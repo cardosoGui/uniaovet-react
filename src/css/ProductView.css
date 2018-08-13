@@ -1,0 +1,28 @@
+.product-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.product-image-content {
+  width: 65%;
+}
+.product-thumb-div {
+  display: flex;
+  justify-content: center;
+}
+.product-thumb {
+  height: 200px;
+  width: 200px;
+}
+.content-button-buy {
+  display: flex;
+  justify-content: center;
+}
+.modal.modal-fixed-footer {
+  width: 90%;
+  height: 90%;
+}
+.modal {
+  margin-top: -2em;
+  max-height: 85%;
+}

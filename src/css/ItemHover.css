@@ -1,0 +1,81 @@
+.content-itens {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.span-itens {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.background-item {
+  border-radius: 100%;
+  height: 10em;
+  width: 10em;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position-y: 50%;
+  background-size: 110%;
+  transition: 0.5s;
+}
+.background-item:hover {
+  width: 12em;
+  height: 12em;
+}
+
+.row-itens {
+  bottom: 04%;
+}
+
+.item01 {
+  background-image: url("../img/produtos/berco-vet-inox/berco-vet-inox.jpg");
+}
+.item02 {
+  background-image: url("../img/produtos/calha/calha-de-aco.jpg");
+}
+.item03 {
+  background-image: url("../img/produtos/mesa-calha/mesa-calha-inox.jpg");
+  background-size: 90%;
+  background-position-x: 80%;
+}
+.item04 {
+  background-image: url("../img/produtos/suporte-soro-quadripe/suporte-soro-quadripe.jpg");
+}
+.item05 {
+  background-image: url("../img/produtos/mesa-fluidoterapia/mesa-fluidoterapia.jpg");
+  background-size: 70%;
+  background-position-x: 50%;
+}
+.item06 {
+  background-size: 100%;
+  background-position-x: 85%;
+  background-image: url("../img/produtos/mesa-pantografica/mesa-calha-pantografica.jpg");
+}
+
+@media screen and (max-width: 1200px) {
+  .background-item {
+    width: 8em;
+    height: 8em;
+  }
+  .background-item:hover {
+    width: 10em;
+    height: 10em;
+  }
+  .row-itens {
+    top: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .background-item {
+    width: 7em;
+    height: 7em;
+  }
+  .background-item:hover {
+    width: 8em;
+    height: 8em;
+  }
+  .row-itens {
+    top: 90%;
+  }
+}

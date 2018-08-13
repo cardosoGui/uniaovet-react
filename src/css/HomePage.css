@@ -1,0 +1,65 @@
+body {
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background-color: rgb(247, 247, 247);
+}
+.capa-site {
+  opacity: 0.3;
+}
+.slogan {
+  position: relative;
+  bottom: 30em;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+  color: white;
+  height: 2em;
+}
+.center-text h1 {
+  font-size: 7em;
+}
+
+.center-text {
+  text-align: center;
+}
+.text-header {
+  font-weight: 600;
+  font-size: 2em;
+}
+.text-content {
+  font-size: 1.33em;
+}
+.image-home {
+  border-radius: 100%;
+  margin: 1.5em 0.5em;
+  height: 15em;
+  width: 15em;
+  background-position-y: 3.5em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../img/backgrounds/dog.jpg");
+  background-color: rgba(91, 99, 208, 0.186);
+}
+@media screen and (max-width: 1200px) {
+  .slogan {
+    bottom: 33em;
+  }
+  .center-text h1 {
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slogan {
+    bottom: 33em;
+  }
+  .center-text h1 {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slogan {
+    bottom: 33em;
+  }
+  .center-text h1 {
+    font-size: 3em;
+  }
+}

@@ -1,0 +1,60 @@
+.navbar-button {
+  position: absolute;
+  margin: 0% 0;
+  left: 1em;
+  top: 1em;
+  visibility: hidden;
+}
+.navbar-background {
+  position: fixed;
+  background-color: blue;
+  border-radius: 1em 0 1em;
+  height: 5em;
+  width: 100%;
+}
+.nav-item-menu {
+  padding-left: 1em;
+  margin: 2em;
+  margin-top: 0.5em;
+  background-color: rgba(186, 181, 172, 0.6);
+  height: 2.5em;
+  text-align: left;
+  border-radius: 0.5em 0.5em;
+}
+.nav-item-menu:hover {
+  background-color: rgba(186, 181, 172, 1);
+}
+.nav-item-text {
+  position: relative;
+  bottom: 0.5em;
+  left: 5em;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media screen and (max-width: 999px) {
+  .home-body {
+    bottom: 0;
+  }
+  .navbar-button {
+    visibility: visible;
+  }
+  .navbar-menu-default {
+    display: none;
+  }
+  .navbar-fixed {
+    display: none;
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  .navbar-button {
+    visibility: visible;
+  }
+  .navbar-menu-default {
+    display: none;
+  }
+  .navbar-fixed {
+    display: none;
+  }
+}
