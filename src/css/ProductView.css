@@ -1,23 +1,10 @@
 .product-image {
-  display: flex;
-  justify-content: center;
   width: 100%;
 }
 .product-image-content {
-  width: 65%;
+  width: 50em;
 }
-.product-thumb-div {
-  display: flex;
-  justify-content: center;
-}
-.product-thumb {
-  height: 200px;
-  width: 200px;
-}
-.content-button-buy {
-  display: flex;
-  justify-content: center;
-}
+
 .modal.modal-fixed-footer {
   width: 90%;
   height: 90%;
@@ -25,4 +12,64 @@
 .modal {
   margin-top: -2em;
   max-height: 85%;
+}
+.width-ajust {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-button {
+  width: 10em;
+}
+
+.product-thumb {
+  border-radius: 100%;
+  height: 8.7em;
+  width: 8.7em;
+  border: 1px outset rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.55);
+  box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.55);
+}
+
+@media screen and (max-width: 1400px) {
+  .product-image-content {
+    width: 40em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .product-image-content {
+    width: 40em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product-image-content {
+    width: 40em;
+    height: 20em;
+  }
+  .product-thumb {
+    width: 5.7em;
+    height: 5.7em;
+  }
+  .product-width-ajust {
+    width: 18em;
+  }
+  .product-button {
+    width: 5em;
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-image-content {
+    width: 20em;
+    height: 30em;
+  }
+  .product-button {
+    width: 15em;
+  }
+  .btn {
+    font-size: smaller;
+  }
 }

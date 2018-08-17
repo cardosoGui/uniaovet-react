@@ -10,22 +10,22 @@ const ItemHover = () => (
   <div className="hide-on-small-only">
     <Link to="/produtos">
       <div className="content-itens">
-        <Col className="span-itens center-align row-itens" m={2}>
+        <Col offset="m1" className="span-itens center-align" m={2}>
           <div className="item01 background-item z-depth-3" />
         </Col>
-        <Col offset="m2" className="span-itens center-align row-itens" m={2}>
+        <Col offset="m1" className="span-itens center-align" m={2}>
           <div className="item02 background-item z-depth-3" alt="Calha" />
         </Col>
-        <Col offset="m4" className="span-itens center-align row-itens" m={2}>
+        <Col offset="m1" className="span-itens center-align" m={2}>
           <div className="item03 background-item z-depth-3" />
         </Col>
-        <Col offset="m6" className="span-itens center-align row-itens" m={2}>
+        <Col offset="m1" className="span-itens center-align" m={2}>
           <div className="item04 background-item z-depth-3" />
         </Col>
-        <Col offset="m8" className="span-itens center-align row-itens" m={2}>
+        <Col offset="m1" className="span-itens center-align" m={2}>
           <div className="item05 background-item z-depth-3" />
         </Col>
-        <Col offset="m10" className="span-itens center-align row-itens" m={2}>
+        <Col offset="m1" className="span-itens center-align" m={2}>
           <div className="item06 background-item z-depth-3" />
         </Col>
       </div>

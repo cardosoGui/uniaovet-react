@@ -1,12 +1,12 @@
 .content-itens {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  height: 15em;
+  width: 80%;
 }
 .span-itens {
   display: flex;
   justify-content: center;
-  position: absolute;
 }
 .background-item {
   border-radius: 100%;
@@ -21,10 +21,6 @@
 .background-item:hover {
   width: 12em;
   height: 12em;
-}
-
-.row-itens {
-  bottom: 04%;
 }
 
 .item01 {

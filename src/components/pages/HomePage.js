@@ -20,9 +20,9 @@ const Homepage = () => (
       />
     </Row>
     <Row>
-      <div>
+      <Col m={10} l={12}>
         <ItemHover />
-      </div>
+      </Col>
     </Row>
     <Row>
       <Col className="offset-s1 offset-m1" s={10} m={6}>

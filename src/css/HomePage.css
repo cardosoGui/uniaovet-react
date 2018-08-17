@@ -8,8 +8,8 @@ body {
 .slogan {
   position: relative;
   bottom: 30em;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
-  color: white;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  color: #414471;
   height: 2em;
 }
 .center-text h1 {

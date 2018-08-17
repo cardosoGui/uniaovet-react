@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 import "../../css/ProductView.css";
 
 const ProductView = ({ title, text, image, category, link, thumbnail }) => (
-  <Col m={4}>
-    <div className="product-thumb-div">
+  <Col className="width-ajust" s={10} m={4}>
+    <div>
       <img className="product-thumb" src={thumbnail} alt="produto união-vet" />
     </div>
     <Modal
       header={category}
       fixedFooter
       trigger={
-        <div className="product-thumb-div">
+        <div className="width-ajust product-button">
           <Button style={{ margin: "1em" }} className="red" waves="light">
             {category}
           </Button>
@@ -29,8 +29,8 @@ const ProductView = ({ title, text, image, category, link, thumbnail }) => (
             <p>{text}</p>
           </Col>
 
-          <Col offset="m2" m={8} s={10}>
-            <div className="product-image">
+          <Col offset="m2 s1" m={8} s={10}>
+            <div className="product-image width-ajust">
               <img
                 align="absmiddle"
                 className="product-image-content"
@@ -38,14 +38,15 @@ const ProductView = ({ title, text, image, category, link, thumbnail }) => (
                 alt={title}
               />
             </div>
-            <Col className="content-button-buy" m={12} s={10}>
+            <Col className="width-ajust " m={12} s={10}>
               <Button
                 style={{ margin: "1em" }}
                 className="blue"
                 node="a"
                 href={link}
               >
-                Ver Detalhes<Icon>shopping_cart</Icon>
+                Ver Detalhes
+                <Icon left>shopping_cart</Icon>
               </Button>
             </Col>
           </Col>

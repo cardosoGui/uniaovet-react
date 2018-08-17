@@ -66,6 +66,7 @@ class ContactPage extends React.Component {
             content={"Materiais Veterinários"}
             image={Contato}
             icon={"pets"}
+            color={"#414471"}
           />
         </Row>
         <Row>
@@ -74,16 +75,17 @@ class ContactPage extends React.Component {
             onSubmit={this.handleSubmit.bind(this)}
             method="POST"
           >
-            <Col className="center-align" offset="s2 m4" s={8} m={4}>
+            <Col className="center-align" offset="s2 m4" s={8} m={4} l={12}>
               <h3>Contato</h3>
             </Col>
-            <Col offset="s1 m3">
+            <Col offset="s1 m2 l3">
               <Input
                 autoComplete="off"
                 id="name"
                 label="Nome Completo"
                 s={11}
                 m={10}
+                l={12}
                 validate
               >
                 <Icon>account_circle</Icon>
@@ -93,6 +95,7 @@ class ContactPage extends React.Component {
                 id="phone"
                 s={11}
                 m={10}
+                l={12}
                 label="Telefone"
                 type="tel"
                 validate
@@ -106,6 +109,7 @@ class ContactPage extends React.Component {
                 label="Email"
                 s={11}
                 m={10}
+                l={12}
                 validate
               >
                 <Icon>email</Icon>
@@ -118,6 +122,7 @@ class ContactPage extends React.Component {
                 data-length="120"
                 s={11}
                 m={10}
+                l={12}
                 validate
               >
                 <Icon>message</Icon>
