@@ -33,15 +33,19 @@ const Homepage = () => (
           <p>
             A União-Veterinaria, esta no mercado a mais de 10 anos, focada em
             manter a qualidade sempre excelente, não medimos esforços em trazer
-            soluções para o seu negócio. <br />
-            Aqui na nossa pagina, você encontrar todos os produtos que precisa,
-            para a sua <strong>Veterinaria</strong>, fique a vontade, encontre
-            tudo em nossa pagina de produtos clicando em saiba mais.
+            soluções para o seu negócio. <br />A empresa vem desenvolvendo
+            móveis e equipamentos de uso veterinário que são reconhecidos pela
+            excelência na qualidade. Aqui na nossa pagina, você encontrar todos
+            os produtos que precisa, para a sua <strong>Veterinaria</strong>,
+            fique a vontade, encontre tudo em nossa pagina de produtos clicando
+            em saiba mais.
           </p>
         </div>
       </Col>
       <Col className="offset-s2 offset-m1" s={10} m={4}>
-        <div alt="Pets" className="image-home" />
+        <Link to="/produtos">
+          <div alt="Garantia de Qualidade" className="image-home hoverable" />
+        </Link>
       </Col>
       <Col className="offset-s3 offset-m5" s={8} m={7}>
         <Link to="/produtos">
@@ -53,36 +57,23 @@ const Homepage = () => (
       </Col>
     </Row>
     <hr />
-    <Row style={{ textAlign: "center" }}>
-      <Col offset="s1" s={10} m={5}>
-        <div className="text-header">
-          <h4>"Sobre a Empresa"</h4>
-        </div>
-        <div className="text-content">
-          <p>Um texto falando sobre a empresa</p>
-        </div>
-      </Col>
-      <Col className="offset-s1 offset-m1" s={10} m={5}>
-        <div className="text-header">
-          <h4>"Oque temos de melhor a oferecer"</h4>
-        </div>
-        <div className="text-content">
-          <p>Vantagens em relação ao consumidor</p>
-        </div>
-      </Col>
-    </Row>
-    <hr />
     <Row>
       <Col className="offset-s1 offset-m2" s={10} m={8}>
         <div className="text-header">
-          <h4>Aqui, queremos ganhar a atenção do nosso cliente</h4>
+          <h4>Nossa Fábrica</h4>
         </div>
         <div className="text-content">
           <p>
-            Por isso, aqui vamos escrever, promoções e outras coisas que possam
-            interessar nossos clientes, como por exemplo, podemos dar destaque
-            aos produtos que mais são vendidos, além de falar dos serviços
-            também.
+            Localizada no bairro das Nações Unidas em São Paulo a
+            <Link to="sobre">
+              <span className="blue-text text-darken-2">
+                {" "}
+                União-Veterinária{" "}
+              </span>
+            </Link>
+            dispõe de um parque fabril de 1.200 metros quadrados, conta com uma
+            equipe de alta capacitação técnica e utiliza matéria-prima de
+            primeira qualidade.
           </p>
         </div>
         <Link to="/produtos">

@@ -29,14 +29,16 @@ body {
 .image-home {
   border-radius: 100%;
   margin: 1.5em 0.5em;
-  height: 15em;
-  width: 15em;
-  background-position-y: 3.5em;
+  height: 18em;
+  width: 18em;
+  background-position-y: 3em;
+  background-position-x: 0.5em;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-image: url("../img/backgrounds/dog.jpg");
+  background-size: 93%;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/uniao-veterinaria.appspot.com/o/selo-de-qualidad.png?alt=media&token=2d0d3237-55d2-4fcd-828e-3c6359a46318");
   background-color: rgba(91, 99, 208, 0.186);
 }
+
 @media screen and (max-width: 1200px) {
   .slogan {
     bottom: 33em;

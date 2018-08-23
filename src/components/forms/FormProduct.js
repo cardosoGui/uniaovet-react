@@ -1,12 +1,9 @@
 import React from "react";
 import { Row, Input, Button, Col, Icon, Preloader } from "react-materialize";
-import Slogan from "../utils/Slogan";
 import axios from "axios";
 import history from "../utils/History";
 
-import Contato from "../../img/backgrounds/computer-doctor.jpg";
-
-class ContactPage extends React.Component {
+class FormProduct extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -56,29 +53,19 @@ class ContactPage extends React.Component {
   toast = () => {
     window.Materialize.toast("Enviando menssagem", 5000);
   };
-
   render() {
     return (
       <div>
-        <Row>
-          <Slogan
-            title={"União Veterinária"}
-            content={"Materiais Veterinários"}
-            image={Contato}
-            icon={"pets"}
-            color={"#414471"}
-          />
-        </Row>
         <Row>
           <form
             id="contact-form"
             onSubmit={this.handleSubmit.bind(this)}
             method="POST"
           >
-            <Col className="center-align" offset="s2 m3 " s={8} m={4} l={12}>
-              <h3>Contato</h3>
+            <Col className="center-align" offset="s2 m4" s={8} m={4} l={12}>
+              <h3>Faça seu pedido</h3>
             </Col>
-            <Col offset="s1 m2 l1">
+            <Col>
               <Input
                 autoComplete="off"
                 id="name"
@@ -127,6 +114,19 @@ class ContactPage extends React.Component {
               >
                 <Icon>message</Icon>
               </Input>
+              <Input
+                s={11}
+                m={10}
+                l={12}
+                type="select"
+                label="Tamanhos"
+                icon="weekend"
+                defaultValue="2"
+              >
+                <option value="1">1,60m</option>
+                <option value="2">1,90m</option>
+                <option value="3">2,60m</option>
+              </Input>
             </Col>
             {this.state.loading ? (
               <Col
@@ -152,4 +152,4 @@ class ContactPage extends React.Component {
   }
 }
 
-export default ContactPage;
+export default FormProduct;

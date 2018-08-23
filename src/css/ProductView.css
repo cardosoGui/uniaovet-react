@@ -1,8 +1,9 @@
 .product-image {
-  width: 100%;
+  width: 26em;
 }
-.product-image-content {
-  width: 50em;
+.card .card-image img {
+  width: 390px;
+  height: 390px;
 }
 
 .modal.modal-fixed-footer {
@@ -18,8 +19,13 @@
   flex-direction: column;
   justify-content: center;
 }
+.flex-ajust {
+  display: flex;
+  justify-content: center;
+}
 .product-button {
-  width: 10em;
+  width: 15em;
+  font-size: 70%;
 }
 
 .product-thumb {
@@ -32,22 +38,15 @@
   box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.55);
 }
 
-@media screen and (max-width: 1400px) {
-  .product-image-content {
-    width: 40em;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .product-image-content {
-    width: 40em;
-  }
-}
-
 @media screen and (max-width: 900px) {
-  .product-image-content {
-    width: 40em;
-    height: 20em;
+  .product-image {
+    width: 20em;
   }
+  .card .card-image img {
+    width: 280px;
+    height: 280px;
+  }
+
   .product-thumb {
     width: 5.7em;
     height: 5.7em;
@@ -55,21 +54,27 @@
   .product-width-ajust {
     width: 18em;
   }
-  .product-button {
-    width: 5em;
-    font-size: 60%;
-  }
 }
 
 @media screen and (max-width: 600px) {
-  .product-image-content {
-    width: 20em;
-    height: 30em;
+  .product-image {
+    width: 16em;
   }
+  .card .card-image img {
+    width: 224px;
+    height: 224px;
+  }
+
   .product-button {
     width: 15em;
   }
-  .btn {
-    font-size: smaller;
+}
+@media screen and (max-width: 320px) {
+  .product-image-content {
+    width: 10em;
+    height: 20em;
+  }
+  .product-button {
+    width: 15em;
   }
 }
