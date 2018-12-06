@@ -1,10 +1,11 @@
 import React from "react";
-import { Row, Input, Button, Col, Icon, Preloader } from "react-materialize";
-import Slogan from "../utils/Slogan";
+import { Col, Row, Button, Input, Preloader, Icon } from "react-materialize";
+import Slogan from "../../components/utils/Slogan";
 import axios from "axios";
 import history from "../utils/History";
+import ReactGA from "react-ga";
 
-import Contato from "../../img/backgrounds/computer-doctor.jpg";
+import emailContato from "../../img/backgrounds/computer-doctor.jpg";
 
 class ContactPage extends React.Component {
   constructor() {
@@ -14,8 +15,17 @@ class ContactPage extends React.Component {
       send: false
     };
   }
+
+  handleClick() {
+    ReactGA.event({
+      category: "Navigation",
+      action: "Clicked Link"
+    });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
+    const { id } = this.props.match.params;
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
@@ -26,17 +36,18 @@ class ContactPage extends React.Component {
         {
           method: "POST",
           url:
-            "https://us-central1-pwa-experiment-eb2bd.cloudfunctions.net/enviarEmail",
+            "https://us-central1-uniao-veterinaria.cloudfunctions.net/enviarEmail",
           data: {
-            name: name,
-            email: email,
-            phone: phone,
-            message: message
+            name,
+            email,
+            phone,
+            product: `${id}`,
+            message
           }
         },
         this.setState({ loading: true })
       ).then(response => {
-        if (response.data.msg === "success") {
+        if (response.data === "success") {
           this.setState({ loading: false });
           window.Materialize.toast(
             "Mensagem Enviada, aguarde nosso contato!",
@@ -45,7 +56,7 @@ class ContactPage extends React.Component {
           setTimeout(() => {
             history.push("/");
           }, 3000);
-        } else if (response.data.msg === "fail") {
+        } else if (response.data === "fail") {
           alert("Message failed to send.");
         }
       });
@@ -56,36 +67,33 @@ class ContactPage extends React.Component {
   toast = () => {
     window.Materialize.toast("Enviando menssagem", 5000);
   };
-
   render() {
+    const { id } = this.props.match.params;
+    ReactGA.pageview("/contato");
     return (
-      <div>
-        <Row>
-          <Slogan
-            title={"União Veterinária"}
-            content={"Materiais Veterinários"}
-            image={Contato}
-            icon={"pets"}
-            color={"#414471"}
-          />
-        </Row>
+      <div className="josefin-font">
+        <Col s={10} m={12} l={12}>
+          <Slogan title={"GOOMEC"} image={emailContato} />
+        </Col>
         <Row>
           <form
             id="contact-form"
             onSubmit={this.handleSubmit.bind(this)}
             method="POST"
           >
-            <Col className="center-align" offset="s2 m3 " s={8} m={4} l={12}>
-              <h3>Contato</h3>
-            </Col>
-            <Col offset="s1 m2 l1">
+            <Row>
+              <Col className="center-align" offset="" s={12} m={12} l={12}>
+                <h3>Contato</h3>
+                {id ? <h4>Produto: {id}</h4> : ""}
+              </Col>
+            </Row>
+            <Col offset="s1 m3 l3" s={10} m={8} l={8}>
               <Input
                 autoComplete="off"
                 id="name"
                 label="Nome Completo"
                 s={11}
                 m={10}
-                l={12}
                 validate
               >
                 <Icon>account_circle</Icon>
@@ -95,7 +103,6 @@ class ContactPage extends React.Component {
                 id="phone"
                 s={11}
                 m={10}
-                l={12}
                 label="Telefone"
                 type="tel"
                 validate
@@ -109,7 +116,6 @@ class ContactPage extends React.Component {
                 label="Email"
                 s={11}
                 m={10}
-                l={12}
                 validate
               >
                 <Icon>email</Icon>
@@ -122,7 +128,6 @@ class ContactPage extends React.Component {
                 data-length="120"
                 s={11}
                 m={10}
-                l={12}
                 validate
               >
                 <Icon>message</Icon>
@@ -134,14 +139,22 @@ class ContactPage extends React.Component {
                 style={{ marginBottom: "1em" }}
                 s={12}
                 m={12}
+                l={12}
               >
                 <Preloader size="big" />
               </Col>
             ) : (
               ""
             )}
-            <Col className="center-align" s={12} m={12}>
-              <Button className="blue" large type="submit">
+            <Col className="center-align" s={12} m={12} l={12}>
+              <Button
+                onClick={() => {
+                  this.handleClick();
+                }}
+                className="blue"
+                large
+                type="submit"
+              >
                 Enviar
               </Button>
             </Col>

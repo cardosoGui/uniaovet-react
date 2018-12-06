@@ -13,7 +13,7 @@ import "../../css/Navigation.css";
 const Navigation = () => (
   <div>
     <div>
-      <Navbar className="color-site" brand="UniVet" fixed left>
+      <Navbar className="color-site" fixed left>
         <NavItem href="/">Home</NavItem>
         <NavItem href="/sobre">Sobre nós</NavItem>
         <NavItem href="/produtos">Produtos</NavItem>

@@ -27,6 +27,7 @@ import mesaFluidoTerapiaInoxThumb from "../../img/produtos/mesa-fluidoterapia/me
 // Berço Verterinário inox
 import bercoVetInoxProd from "../../img/produtos/berco-vet-inox/berco-vet-inox-prod.jpg";
 import bercoVetInoxThumb from "../../img/produtos/berco-vet-inox/berco-vet-inox.jpg";
+import ProductsPageAnother from "./ProductsPageAnother";
 
 const ProductsPage = () => (
   <div>
@@ -323,6 +324,11 @@ const ProductsPage = () => (
         <Collapsible defaultActiveKey={0}>
           <CollapsibleItem header="Equipamentos Veterinários" icon="pets">
             <Row>
+              <Col offset="l1" l={10}>
+                <ProductsPageAnother />
+              </Col>
+            </Row>
+            {/* <Row>
               <ProductView
                 thumbnail={calhaThumb}
                 image={calhaProd}
@@ -399,7 +405,7 @@ const ProductsPage = () => (
                   "https://produto.mercadolivre.com.br/MLB-904970382-berco-para-animais-veterinario-inox-_JM"
                 }
               />
-            </Row>
+            </Row> */}
           </CollapsibleItem>
           {/* <CollapsibleItem header="Itens" icon="pets">
               <Row>

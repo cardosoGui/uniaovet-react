@@ -8,6 +8,7 @@ import Slide01 from "../../img/backgrounds/veterinario.jpg";
 import Doctor from "../../img/backgrounds/doctor.jpg";
 
 import Slogan from "../utils/Slogan";
+import ProductsPageAnother from "./ProductsPageAnother";
 
 const Homepage = () => (
   <div className="homepage">
@@ -19,11 +20,7 @@ const Homepage = () => (
         icon={"pets"}
       />
     </Row>
-    <Row>
-      <Col m={10} l={12}>
-        <ItemHover />
-      </Col>
-    </Row>
+
     <Row>
       <Col className="offset-s1 offset-m1" s={10} m={6}>
         <div className="text-header">
@@ -76,36 +73,13 @@ const Homepage = () => (
             primeira qualidade.
           </p>
         </div>
-        <Link to="/produtos">
-          <Button>saber mais</Button>
-        </Link>
+
         <hr />
       </Col>
     </Row>
     <Row>
-      <Col className="offset-s1 offset-m2" s={10} m={8}>
-        <Link to="/produtos">
-          <Slider>
-            <Slide
-              alt="equipamentos-veterinarios"
-              src={Slide01}
-              title="Produtos em Destaque"
-            >
-              <div className="text-content">
-                <p>Clique Aqui</p>
-              </div>
-            </Slide>
-            <Slide
-              alt="equipamentos-veterinarios"
-              src={Doctor}
-              title="Outros Produtos em Destaque"
-            >
-              <div className="text-content">
-                <p>Clique Aqui</p>
-              </div>
-            </Slide>
-          </Slider>
-        </Link>
+      <Col offset="l1" s={12} m={12} l={10}>
+        <ProductsPageAnother />
       </Col>
     </Row>
   </div>

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "stage": "uniao-veterinaria"
+    "stage": "uniao-veterinaria",
+    "default": "uniao-veterinaria"
   }
 }
