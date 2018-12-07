@@ -9,8 +9,7 @@ const Slogan = ({ title, content, image, icon }) => (
       <Parallax imageSrc={image} />
     </div>
     <Col className="center-text slogan" offset="s1" s={10} m={12}>
-      <img src={logo} alt="logo" width="500px" />
-
+      <img className="image-logo" src={logo} alt="logo" width="500px" />
       <h3>{content}</h3>
     </Col>
   </div>

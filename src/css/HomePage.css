@@ -57,11 +57,16 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .slogan {
     bottom: 33em;
   }
   .center-text h1 {
     font-size: 3em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .image-logo {
+    width: 100%;
   }
 }

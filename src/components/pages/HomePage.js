@@ -46,7 +46,7 @@ const Homepage = () => (
       </Col>
       <Col className="offset-s3 offset-m5" s={8} m={7}>
         <Link to="/produtos">
-          <Button large waves="light" className="blue">
+          <Button large waves="light" className="green">
             <Icon left>pets</Icon>
             saiba mais
           </Button>
@@ -63,10 +63,7 @@ const Homepage = () => (
           <p>
             Localizada no bairro das Nações Unidas em São Paulo a
             <Link to="sobre">
-              <span className="blue-text text-darken-2">
-                {" "}
-                União-Veterinária{" "}
-              </span>
+              <span className="blue-text text-darken-2">União-Veterinária</span>
             </Link>
             dispõe de um parque fabril de 1.200 metros quadrados, conta com uma
             equipe de alta capacitação técnica e utiliza matéria-prima de

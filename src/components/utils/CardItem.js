@@ -70,7 +70,8 @@ class CardItem extends React.Component {
               </Row>
               <Row>
                 <Col s={12} m={12} l={12}>
-                  <h3>{this.props.content}</h3>
+                  <h3 className="hide-on-small-only">{this.props.content}</h3>
+                  <p className="hide-on-med-and-up">{this.props.content}</p>
                 </Col>
               </Row>
             </Modal>

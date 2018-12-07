@@ -151,7 +151,7 @@ class ContactPage extends React.Component {
                 onClick={() => {
                   this.handleClick();
                 }}
-                className="blue"
+                className="green"
                 large
                 type="submit"
               >
